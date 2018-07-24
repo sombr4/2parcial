@@ -16,18 +16,18 @@ while (menu[opcion] !== undefined) {
   opcion = read.keyInSelect(menu, `${colors.yellow.bold('Elige una opcion del menu?')}`)
   switch (menu[opcion]) {
     case 'Alta de Alumno':
-      alumno.status = 'Add'
+      alumno.status = 'Alta'
       alumno.getDatos()
       alumno.agregar()
       alumno.getEdad()
       break
     case 'Consulta':
-      alumno.status = 'Search'
+      alumno.status = 'Consulta'
       alumno.consultar()
       read.question(`${colors.blue.bold('OPROME CUALQUIER TECLA PARA VOLVER AL MENU !!!')}`)
       break
     case 'Editar Alumno' :
-      alumno.status = 'Edit'
+      alumno.status = 'Editar'
       alumno.getDatos()
       alumno.modificar()
       break
